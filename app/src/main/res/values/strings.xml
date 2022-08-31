@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Webview Example APP</string>
+    <string name="splash_screen">SplashScreen</string>
+    <string name="copyright">Copyright</string>
+</resources>
