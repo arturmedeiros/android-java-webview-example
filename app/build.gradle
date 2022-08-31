@@ -20,11 +20,11 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.webview"
-        //manifestPlaceholders = [
-                /* ONESIGNAL */
-                /*onesignal_app_id: '{_ONESIGNAL_API_KEY_}',
-                onesignal_google_project_number: 'REMOTE'*/
-        //]
+        /* ONESIGNAL */
+        /*manifestPlaceholders = [
+                onesignal_app_id: '{_ONESIGNAL_API_KEY_}',
+                onesignal_google_project_number: 'REMOTE'
+        ]*/
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
@@ -48,5 +48,4 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     /* ONESIGNAL */
     /*implementation 'com.onesignal:OneSignal:[3.9.1, 3.99.99]'*/
-
 }
