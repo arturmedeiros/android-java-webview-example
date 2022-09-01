@@ -1,5 +1,5 @@
-# Android Example Application (WebView) + Bonus!
-![Android SDK](https://img.shields.io/badge/28-100000?label=Android%20SDK&style=for-the-badge&logo=android&color=)
+# Android Example Application (WebView) + Push Notification!
+![Android SDK](https://img.shields.io/badge/31-100000?label=Android%20SDK&style=for-the-badge&logo=android&color=)
 ![Android+Studio](https://img.shields.io/badge/Android_Studio-555555?style=for-the-badge&logo=Android+Studio)
 
 Application that renders a web page in a simple and transparent way. With it, you can turn any website into a native application for your Android phone!
@@ -34,66 +34,17 @@ In the midst of the code, we prepared the necessary fields so that you can integ
 
 **⚠️ WARNING:** You need to have a OneSignal account and a token to be able to integrate.
 
-## ⚙️ Configure OneSignal
+## ⚙️ Configure OneSignal Token
 
-The code responsible for the integration with OneSignal are commented. You will need to uncomment them and add your Token.
+In order for your application to receive Push Notifications, you need to provide your Token.
 
-### Uncommenting the codes
-
-```/app/build.gradle``` 
-
-Line 7
+Line 25 ```/app/build.gradle```
 
 ```
-dependencies {
-    /* ONESIGNAL */
-->  /*classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.11.0, 0.99.99]'*/
-}
-```
-
-Line 11
-
-```
-    /* ONESIGNAL */
-->  /*apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'*/
-
-```
-
-Line 24
-
-```
-    /* ONESIGNAL */
-->  /*manifestPlaceholders = [
-->          onesignal_app_id: '{_ONESIGNAL_API_KEY_}',
-->          onesignal_google_project_number: 'REMOTE'
-->  ]*/
-```
-
-Line 50
-
-```
-    /* ONESIGNAL */
-->  /*implementation 'com.onesignal:OneSignal:[3.9.1, 3.99.99]'*/
-```
-
-```/app/src/main/java/com/example/webview/ApplicationClass.java```
-
-
-Line 6
-
-```
-    /* ONESIGNAL */
-->  /*import com.onesignal.OneSignal;*/
-```
-
-Line 13
-
-```
-    /* ONESIGNAL */
-->  /*OneSignal.startInit(this)
-->     .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
-->     .unsubscribeWhenNotificationsAreDisabled(true)
-->     .init();*/
+    manifestPlaceholders = [
+->      onesignal_app_id: 'ONESIGNAL_API_KEY_XXXXXXXXXXXXXXXXXXXX',
+        onesignal_google_project_number: 'REMOTE'
+    ]
 ```
 
 ## 📦 Generating signed APK
